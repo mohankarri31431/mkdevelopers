@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MK DEVELOPERS | Real Estate</title>
+
+  <!-- Leaflet (no integrity while debugging) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Your styles & script -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-title">
+        <img src="images/logo.png" alt="MK Developers Logo" class="logo" />
+        <h1 class="brand">MK DEVELOPERS</h1>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#map-section">Map</a>
+        <a href="#airport">Airport</a>
+        <a href="#korukonda">Korukonda</a>
+        <a href="#srirangapatnam">Srirangapatnam</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h2>Find Your Perfect Plot with MK DEVELOPERS</h2>
+      <p>Explore premium real estate opportunities with trusted service and transparency.</p>
+      <a class="cta-btn" href="#contact">Book Your Plot Now</a>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section id="map-section" class="map-section">
+    <div class="container">
+      <h2>Explore Our Locations</h2>
+      <div id="map" aria-label="Map showing MK Developers locations" style="min-height:300px;"></div>
+    </div>
+  </section>
+
+  <!-- AIRPORT PLOTS -->
+  <section id="airport" class="plots-section">
+    <div class="container">
+      <h2>Plots Near Airport</h2>
+
+      <div class="plot-cards">
+        <article class="card">
+          <img src="images/airport1.jpg" alt="Airport Plot A" />
+          <div class="card-body">
+            <h3>Airport Plot A</h3>
+            <p>Premium plots near airport road with 40ft wide roads and park access.</p>
+            <p>
+              <strong>Location:</strong> Burugupudi, beside Dwaraka Mahal Function Hall
+              <br />
+              <span class="local-text">
+                <strong>స్థలం:</strong> బురుగుపూడి, ద్వారకా మహల్ ఫంక్షన్ హాల్ పక్కన
+              </span>
+            </p>
+            <p><strong>Area:</strong> 18 cents</p>
+
+            <div class="btn-group">
+              <a href="airportA-details.html" class="plot-btn">Details</a>
+              <a href="airportA-gallery.html" class="plot-btn">Gallery</a>
+              <a href="airportA-booking.html" class="plot-btn">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/airport2.jpg" alt="Airport Plot B" />
+          <div class="card-body">
+            <h3>Airport Plot B</h3>
+            <p>Close proximity to airport junction. Ideal for investment.</p>
+            <p>
+              <strong>Location:</strong> Madhurapudi, near Airport
+              <br />
+              <span class="local-text">
+                <strong>స్థలం:</strong> మధురాపూడి, విమానాశ్రయం దగ్గర
+              </span>
+            </p>
+            <p><strong>Area:</strong> 2 acres</p>
+
+            <div class="btn-group">
+              <a href="airportB-details.html" class="plot-btn">Details</a>
+              <!-- open video gallery -->
+              <button class="plot-btn" id="openVideo" type="button" aria-controls="videoModal">Gallery</button>
+              <a href="airportB-booking.html" class="plot-btn">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+ 
+      </div>
+    </div> <!-- KORUKONDA PLOTS -->
+  <section id="korukonda" class="plots-section">
+    <div class="container">
+
+      <h2>Plots in Korukonda</h2>
+
+      <div class="plot-cards">
+        <article class="card">
+          <img src="images/korukonda1.jpg" alt="Korukonda Plot A" />
+          <div class="card-body">
+            <h3>Korukonda Plot A</h3>
+            <p></p>
+            <div class="btn-group">
+              <a href="korukondaA-details.html" class="plot-btn">Details</a>
+              <a href="korukondaA-gallery.html" class="plot-btn">Gallery</a>
+              <a href="korukondaA-booking.html" class="plot-btn">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/korukonda2.jpg" alt="Korukonda Plot B" />
+          <div class="card-body">
+            <h3>Korukonda Plot B</h3>
+            <p>Peaceful area with greenery, perfect for family homes.</p>
+            <div class="btn-group">
+              <a href="korukondaB-details.html" class="plot-btn">Details</a>
+              <a href="korukondaB-gallery.html" class="plot-btn">Gallery</a>
+              <a href="korukondaB-booking.html" class="plot-btn">Book Now</a>
+            </div>
+          </div>
+        </article>
+  </section>
+
+  <!-- SRIRANGAPATNAM PLOTS -->
+  <section id="srirangapatnam" class="plots-section">
+    <div class="container">
+      <h2>Plots in Srirangapatnam</h2>
+
+      <div class="plot-cards">
+        <article class="card">
+          <img src="images/sriranga1.jpg" alt="Srirangapatnam Plot A" />
+          <div class="card-body">
+            <h3>Srirangapatnam Plot A</h3>
+            <p>Close to temples and main highway, easy connectivity to town.</p>
+            <div class="btn-group">
+              <a href="srirangaA-details.html" class="plot-btn">Details</a>
+              <a href="srirangaA-gallery.html" class="plot-btn">Gallery</a>
+              <a href="srirangaA-booking.html" class="plot-btn">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/sriranga2.jpg" alt="Srirangapatnam Plot B" />
+          <div class="card-body">
+            <h3>Srirangapatnam Plot B</h3>
+            <p>Ready-to-build plots with all basic amenities nearby.</p>
+            <div class="btn-group">
+              <a href="srirangaB-details.html" class="plot-btn">Details</a>
+              <a href="srirangaB-gallery.html" class="plot-btn">Gallery</a>
+              <a href="srirangaB-booking.html" class="plot-btn">Book Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Interested? Get in Touch</h2>
+
+      <form id="inquiry-form" class="inquiry-form" action="#" method="post" novalidate>
+        <label class="visually-hidden" for="name">Your Name</label>
+        <input id="name" name="name" type="text" placeholder="Your Name" required />
+
+        <label class="visually-hidden" for="email">Your Email</label>
+        <input id="email" name="email" type="email" placeholder="Your Email" required />
+
+        <label class="visually-hidden" for="phone">Your Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="Your Phone" required />
+
+        <label class="visually-hidden" for="location">Plot Location</label>
+        <select id="location" name="location" required>
+          <option value="">Select Plot Location</option>
+          <option value="airport">Airport</option>
+          <option value="korukonda">Korukonda</option>
+          <option value="srirangapatnam">Srirangapatnam</option>
+        </select>
+
+        <label class="visually-hidden" for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message"></textarea>
+
+        <button type="submit" class="submit-btn">Submit Inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- VIDEO MODAL (placed at end of body for accessibility & clean structure) -->
+  <div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Close video">&times;</button>
+      <video controls>
+        <source src="videos/airportB.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 MK DEVELOPERS | All Rights Reserved</p>
+      <p>
+        Follow us:
+        <a href="#" aria-label="Instagram">Instagram</a> |
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- FLOATING CONTACT -->
+  <a class="contact-float call-btn" href="tel:+919666652163" aria-label="Call MK Developers">📞 Call Now</a>
+  <a
+    class="contact-float whatsapp-btn"
+    href="https://wa.me/919666652163"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp MK Developers"
+    >💬 WhatsApp</a
+  >
+</body>
+</html>
